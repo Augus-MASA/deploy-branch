@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HomeComponent } from './home/home.component';
+import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
 
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -12,7 +14,9 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 }
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    PdfViewerComponent
   ],
   imports: [
     BrowserModule,
