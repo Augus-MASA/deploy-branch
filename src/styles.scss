@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+.head-nav{
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+.navbar{
+    background-color: #fff !important;
+}
+.nav-btn button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.nav-btn button:focus{
+    border: none;
+    background: none;
+
+}
+// navbar end......
+
+.sub-heading{
+    text-align: center !important;
+}
+.sub-con  {
+    color: rgb(204, 162, 162);
+  
+}
+.banner img{
+    width: 100%;
+    height: auto;
+}
+.banner{
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+//banner------ end
+.about-con img{ 
+   width: 70%;
+   
+}
+.about p {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    padding-top: 10px;
+}
+.about-con{
+   
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+.about-con-1{
+    border-right: solid 1px rgb(111, 112, 112);
+}
+//about...end......
+.all-head h2{
+    position: relative;
+    padding-bottom: 10px;
+}
+.all-head h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background-color: #e03a3c;
+    transform: translateX(-50%);
+}
