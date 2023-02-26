@@ -57,6 +57,20 @@
     position: relative;
     padding-bottom: 10px;
 }
+.all-head-1 h2{
+    position: relative;
+    padding-bottom: 10px;
+}
+.all-head-1 h2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0 !important;
+    width: 60px;
+    height: 3px;
+    background-color: #e03a3c;
+    transform: none!important;
+}
 .all-head h2::after {
     content: "";
     position: absolute;
@@ -66,4 +80,13 @@
     height: 3px;
     background-color: #e03a3c;
     transform: translateX(-50%);
+}
+//all-head........
+.about2{
+    text-align: center;
+}
+//about2.. end....
+.map iframe{
+    width: 100%;
+    height: auto;
 }
