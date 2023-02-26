@@ -1,8 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-light  ">
   <div class="container">
       <a class="navbar-brand logo fs-2" href="#">Presento<span>.</span></a>
-    <div class="nav-btn order-lg-2">
+    <div class="nav-btn order-lg-2" *ngIf="!isTamilLanguage" (click)="isTamilSelected()">
          <button>த</button>
+    </div>
+    <div class="nav-btn order-lg-2" *ngIf="!!isTamilLanguage" (click)="isEnglishSelected()">
+         <button>EN</button>
     </div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -26,7 +29,7 @@
 <section class="sub-heading">
   <div class="container">
     <div class="sub-con">
-      <h1>  Anna University, Chennai</h1>
+      <h1>  Anna University, {{'CHENNAI' | translate}}</h1>
       <h2>த</h2>
     </div>
   </div>
