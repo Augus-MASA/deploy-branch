@@ -1,3 +1,8 @@
+*{
+    list-style-type: none;
+}
+
+
 /* You can add global styles to this file, and also import other style files */
 .head-nav{
     display: flex !important;
@@ -43,14 +48,52 @@
     font-weight: 500;
     padding-top: 10px;
 }
-.about-con{
-   
+.about-con{  
     display: flex;
     justify-content: center ;
     align-items: center;
+    transform: scale(1)
+}
+.about-cont img{
+    width: 92% !important;
+}
+.about-con-1 a{
+    font-size: 18px;
+    font-weight: bold;
 }
 .about-con-1{
     border-right: solid 1px rgb(111, 112, 112);
+    text-align: center;
+    position: relative;
+
+}
+.about-con-1:hover .about-cont{
+    transform: scale(0.9);
+    transition:all 0.5s ease;
+}
+.about-con-1:hover .about-con{
+    transform: scale(0.9);
+    transition:all 0.5s ease;
+}
+.about-con-1:hover .about-list{
+    opacity: 1;  
+}
+.about-list{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: #080808;
+    width: 100%;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.5s ease;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(235 234 234 / 67%) 0.1%, rgb(227 227 227 / 63%) 90.1%);
 }
 //about...end......
 .all-head h2{
