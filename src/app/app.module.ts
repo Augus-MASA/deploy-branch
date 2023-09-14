@@ -7,6 +7,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HomeComponent } from './home/home.component';
 import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
+import { DetailsViewComponent } from './details-view/details-view.component';
 
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -16,7 +17,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   declarations: [
     AppComponent,
     HomeComponent,
-    PdfViewerComponent
+    PdfViewerComponent,
+    DetailsViewComponent
   ],
   imports: [
     BrowserModule,
