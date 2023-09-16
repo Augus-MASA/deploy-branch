@@ -5,9 +5,15 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
+    path : '',
+    component : HomeComponent, 
+    children: [
+  {
     path : 'details-view',
     component : DetailsViewComponent, 
   }
+]
+}
 ];
 
 @NgModule({
