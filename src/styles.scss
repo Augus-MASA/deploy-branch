@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Dancing+Script:wght@681&family=Pacifico&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+
 * {
   list-style-type: none;
 }
@@ -24,24 +27,21 @@
   color: rgba(0, 0, 0, 0.76);
   font-weight: 600;
 }
+.nav-menu .active{
+  color: #BB2649;
+}
 .nav-menu li a{
-    background-image: linear-gradient(
-        109.6deg,
-        rgb(3, 126, 241) 11.2%,
-        #555555 91.1%
-      );
+  background-image: linear-gradient(109.6deg, #9E9E9E 11.2%, #607D8B 91.1%);
       -webkit-background-clip: text;
       color: transparent;
       font-weight: 600;
+      text-shadow: 1px 1px rgb(0, 0, 0);
+      font-weight: bold;
+      font-size: 22px;
+      letter-spacing: 1px;
 }
 .nav-menu li a:hover{
-    background-image: linear-gradient(
-        109.6deg,
-        rgb(88, 88, 88) 11.2%,
-        #070707 91.1%
-      );
-      -webkit-background-clip: text;
-      color: transparent;
+  color: #BB2649;
 }
 .navbar a img {
   width: 60px;
@@ -102,21 +102,31 @@
 
 .sub-heading {
   text-align: center !important;
+  // background: url('../assets/images/hero-bg.jpg');
+  // background-image: url('../assets/images/hero-bg.jpg');
+  background-image:
+  linear-gradient(273deg,
+    rgba(14, 13, 13, 0.75),
+    rgba(170, 171, 172, 0.39)), url(
+'https://img.freepik.com/free-photo/group-kids-studying-school_1303-26841.jpg?w=360');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sub-con {
-  background-image: linear-gradient(
-    109.6deg,
-    rgb(51, 121, 153) 11.2%,
-    #2196f3 91.1%
-  );
-  -webkit-background-clip: text;
-  color: transparent;
-  line-height: 30px;
+  width: 100%;
 }
 .sub-con h1 {
   font-weight: bold;
   line-height: 58px;
-}
+  line-height: 50px;
+  color: #e2e0e0;
+  font-family: 'Tiro Tamil', serif;}
 
 .banner img {
   width: 100%;
@@ -126,6 +136,9 @@
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 //banner------ end
+.about{
+  background: radial-gradient(circle farthest-side, #fcaddd33, #f8009507);
+}
 .about-con img {
   width: 70%;
 }
@@ -169,7 +182,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  color: #0f0f0f;
+  color: #ffffff;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -181,8 +194,8 @@
   transition: all 0.5s ease;
   background-image: radial-gradient(
     circle farthest-corner at 10% 20%,
-    rgb(235 234 234 / 67%) 0.1%,
-    rgb(227 227 227 / 63%) 90.1%
+    rgba(211, 104, 158, 0.67) 0.1%,
+    rgba(189, 60, 124, 0.63) 90.1%
   );
 }
 .blink {
@@ -196,11 +209,7 @@
 span {
   font-size: 22px;
   font-weight: bold;
-  background-image: linear-gradient(
-    109.6deg,
-    rgb(51, 99, 153) 11.2%,
-    #f0111c 91.1%
-  );
+  background-image: linear-gradient(109.6deg, #850D29 11.2%, #BB2649 91.1%);
   -webkit-background-clip: text;
   color: transparent;
 //   animation: blink 1s linear infinite;
@@ -234,6 +243,7 @@ span {
     font-weight: bold;
     line-height: 38px;
   }
+  
 }
 @media (min-width: 569px) and (min-width: 768px) {
   .about-con-1 {
@@ -257,10 +267,12 @@ span {
 .all-head h2 {
   position: relative;
   padding-bottom: 10px;
+  color: #400023;
 }
 .all-head-1 h2 {
   position: relative;
   padding-bottom: 10px;
+  
 }
 .all-head-1 h2::after {
   content: "";
@@ -271,7 +283,9 @@ span {
   height: 3px;
   background-color: #e03a3c;
   transform: none !important;
+ 
 }
+
 .all-head h2::after {
   content: "";
   position: absolute;
@@ -279,14 +293,20 @@ span {
   left: 50%;
   width: 60px;
   height: 3px;
-  background-color: #e03a3c;
-  transform: translateX(-50%);
+  background-image: linear-gradient(109.6deg, #850D29 11.2%, #1d1b1c 91.1%);
+    transform: translateX(-50%);
 }
 //all-head........
 .about2 {
   text-align: center;
-  background: #03a9f4;
-  color: white;
+ 
+}
+.about2 h2{
+  font-size: 34px !important;
+}
+.about2 p{
+  font-size: 18px;
+  word-spacing: 12px;
 }
 //about2.. end....
 .map iframe {
@@ -294,8 +314,14 @@ span {
   height: auto;
 }
 //Contact.....
+.Contact{
+  background-image: linear-gradient(39.38deg, #b90f5f 31.89%, #0e0d0e38 30.04%, #a5339b1a 29.06%);
+  color: rgb(20, 20, 20);
+}
 .Contact li{
-  color: #3a3b3b;
+  color: #0c0c0c;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 // details-view...........
