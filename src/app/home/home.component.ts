@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,7 +9,27 @@ export class HomeComponent implements OnInit {
 
   isTamilLanguage:boolean = true;
   but:any
+
   constructor(private translate: TranslateService) { 
+   this.navLinks
+  window.onscroll =()=>{ 
+    this.sections.forEach(sec =>{
+      console.log("active");
+        let top= window.scrollY;
+        let offset =sec.offsetTop;
+        let height = sec.offsetHeight;
+        let id =sec.getAttribute('id');
+        
+        
+
+        if (top >= offset && top < offset + height) {
+           this.navLinks.forEach(links =>{
+             links.classList.remove('active')
+                document.querySelector('nav-link [herf*='+id+']')?.classList.add('active');
+           })
+        }
+    })
+}
     setTimeout(() => {
     const hamburger:any = document.querySelector(".hamburger");
     const navMenu:any = document.querySelector(".nav-menu");
@@ -60,4 +79,12 @@ export class HomeComponent implements OnInit {
   //   }
   //   }
  
+  sections=document.querySelectorAll('section');
+  navLinks=document.querySelectorAll('nav-link');
+
+
+
+
+
+
 }
