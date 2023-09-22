@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -12,7 +11,7 @@ export class HomeComponent implements OnInit {
   but:any
 
   constructor(private translate: TranslateService) { 
-   
+   this.navLinks
   window.onscroll =()=>{ 
     this.sections.forEach(sec =>{
       console.log("active");

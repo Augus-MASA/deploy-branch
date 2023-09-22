@@ -44,8 +44,8 @@
   color: #BB2649;
 }
 .navbar a img {
-  width: 60px;
-  height: 60px;
+  width: 104px;
+  height: 104px;
 }
 .nav-link {
   transition: 0.7s ease;
@@ -84,7 +84,7 @@
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 75px;
+    top: 110px;
     gap: 0;
     flex-direction: column;
     background: white;
@@ -138,6 +138,7 @@
 //banner------ end
 .about{
   background: radial-gradient(circle farthest-side, #fcaddd33, #f8009507);
+  padding: 40px 0;
 }
 .about-con img {
   width: 70%;
@@ -206,13 +207,13 @@
   bottom:-45px;
   transform: translate(25%);
 }
-span {
+.about span {
   font-size: 22px;
   font-weight: bold;
   background-image: linear-gradient(109.6deg, #850D29 11.2%, #BB2649 91.1%);
   -webkit-background-clip: text;
   color: transparent;
-//   animation: blink 1s linear infinite;
+  animation: blink 1s linear infinite;
   overflow: hidden;
 }
 @keyframes blink {
@@ -243,7 +244,21 @@ span {
     font-weight: bold;
     line-height: 38px;
   }
-  
+  .about2 {
+    background-image: linear-gradient(212deg, #b90f5f 18.89%, rgba(255, 255, 255, 0.88) 17.04%, rgba(255, 255, 255, 0.79) 29.06%);
+  }
+  .footer {
+    background-image: linear-gradient(151deg, #b90f5f 18.89%, rgba(255, 255, 255, 0.88) 17.04%, rgba(255, 255, 255, 0.79) 29.06%);
+  }
+  .conact-content p{
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .conact-content span{
+    font-size: 14px;
+    font-weight: bold;
+    color: #7d0f28;
+  }
 }
 @media (min-width: 569px) and (min-width: 768px) {
   .about-con-1 {
@@ -254,16 +269,41 @@ span {
   .blink{
     transform: translate(70%);
   }
+  .about2{
+    background-image:linear-gradient(334deg, #b90f5f 11.89%, rgba(255, 255, 255, 0.88) 11.04%, rgba(255, 255, 255, 0.79) 29.06%);
+  }
+  .footer{
+    background-image:linear-gradient(151deg, #b90f5f 11.89%, rgba(255, 255, 255, 0.88) 12.04%, rgba(255, 255, 255, 0.79) 29.06%);
+  }
+  .conact-content span{
+    font-size: 14px;
+    font-weight: bold;
+    color: #7d0f28;
+  }
 }
 @media (min-width: 768px) and (min-width: 1024px) {
   .blink{
     transform: translate(25%);
   }
+  .about2{
+    background-image:linear-gradient(334deg, #b90f5f 11.89%, rgba(255, 255, 255, 0.88) 11.04%, rgba(255, 255, 255, 0.79) 29.06%);
+  }
+  .footer{
+    background-image:linear-gradient(151deg, #b90f5f 11.89%, rgba(255, 255, 255, 0.88) 12.04%, rgba(255, 255, 255, 0.79) 29.06%);
+  }
+
+  .conact-content p{
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .conact-content span{
+    font-size: 22px;
+    font-weight: bold;
+    color: #7d0f28;
+  }
 }
 //about...end......
-.all-head{
-    margin-top: 26px;
-}
+
 .all-head h2 {
   position: relative;
   padding-bottom: 10px;
@@ -302,7 +342,10 @@ span {
  
 }
 .about2 h2{
-  font-size: 34px !important;
+  font-size: 30px !important;
+  padding-top: 80px;
+  text-shadow: 1px 1px #E91E63;
+  font-weight: bold;
 }
 .about2 p{
   font-size: 18px;
@@ -314,16 +357,45 @@ span {
   height: auto;
 }
 //Contact.....
-.Contact{
-  background-image: linear-gradient(39.38deg, #b90f5f 31.89%, #0e0d0e38 30.04%, #a5339b1a 29.06%);
-  color: rgb(20, 20, 20);
+ .Contact{
+  background: radial-gradient(circle farthest-side, rgba(252, 173, 221, 0.2), rgba(248, 0, 149, 0.0274509804));
+ }
+.conact-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.Contact li{
-  color: #0c0c0c;
-  font-weight: bold;
-  font-size: 18px;
+.icon{
+  background-image: linear-gradient(109.6deg, #850D29 11.2%, #1d1b1c 91.1%);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+  margin-right: 6px;
+  color: #ffffff;
 }
 
+//footer......
+.footer h2{
+  background-image: linear-gradient(109.6deg, #850D29 11.2%, #BB2649 91.1%);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px #E91E63;
+}
+.footer li{
+  background-image: linear-gradient(109.6deg, #850D29 11.2%, #BB2649 91.1%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 1px 1px #795548;
+}
+.footer-content{
+  background-image: linear-gradient(109.6deg, #850D29 11.2%, #1d1b1c 91.1%);
+  height: 8vh;
+  width: 100%;
+}
 // details-view...........
 
 .details-view {
