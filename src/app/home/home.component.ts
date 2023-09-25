@@ -9,8 +9,11 @@ export class HomeComponent implements OnInit {
 
   isTamilLanguage:boolean = true;
   but:any
+  pdfUrl:any;
+  documentShow:boolean = false;
+  dialogBoxTitle:any;
 
-  constructor(private translate: TranslateService) { 
+  constructor() { 
    this.navLinks
   window.onscroll =()=>{ 
     this.sections.forEach(sec =>{
@@ -47,27 +50,15 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let language = localStorage.getItem('language');
-    if(!!language && language == 'ta'){
-      this.isTamilLanguage = true;
-      this.translate.use('ta');
-    }
-    else if(!!language && language == 'en'){
-      this.isTamilLanguage = false;
-      this.translate.use('en');
-    }
+    
   }
 
   isTamilSelected(){
     this.isTamilLanguage = true;
-    this.translate.use('ta');
-    localStorage.setItem('language','ta')
   }
 
   isEnglishSelected(){
     this.isTamilLanguage = false;
-    this.translate.use('en');
-    localStorage.setItem('language','en')
   }
   //  change(){
   //   if(window.innerWidth<=992){
@@ -83,7 +74,16 @@ export class HomeComponent implements OnInit {
   navLinks=document.querySelectorAll('nav-link');
 
 
-
+  openDialog(url:any,title:any){
+    this.pdfUrl = url;
+    this.documentShow = true;
+    this.dialogBoxTitle = title
+    setTimeout(() => {
+    const dialog: any = document.querySelector('.dialog-overview');
+    dialog?.show();
+    this.pdfUrl = null
+  }, 500);
+  }
 
 
 

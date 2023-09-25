@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-pdf-viewer',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PdfViewerComponent implements OnInit {
 
-  constructor() { }
+
+  @Input() pdfUrl : any
+  current_url:any;
+
+  constructor(private sanitizer : DomSanitizer) { }
 
   ngOnInit(): void {
+    console.log(this.pdfUrl)
+    this.current_url=this.sanitizer.bypassSecurityTrustResourceUrl(this.pdfUrl)
+  }
+
+  ngOnDestroy(){
+    this.pdfUrl = null;
+    this.current_url = null;
   }
 
 }
