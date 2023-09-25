@@ -410,3 +410,13 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
+.pdfViewer{
+  height: 100vh; 
+  border: dashed 2px var(--sl-color-neutral-200); 
+  padding: 0 1rem; 
+}
+
+.dialog-overview{
+  --width: 100rem;
+}

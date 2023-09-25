@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +8,7 @@ import {TranslateService} from '@ngx-translate/core';
 export class AppComponent {
   title = 'free-academy';
 
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang('ta');
-    translate.use('ta');
+  constructor() {
+   
   }
 }
