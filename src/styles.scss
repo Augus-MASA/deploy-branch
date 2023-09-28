@@ -13,7 +13,7 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: sticky;
   top: 0;
-  z-index: 9999;
+  z-index: 9;
   background-color: white;
 }
 .nav-menu {
@@ -33,9 +33,10 @@
 .nav-menu li a{
   background-image: linear-gradient(109.6deg, #9E9E9E 11.2%, #607D8B 91.1%);
       -webkit-background-clip: text;
-      color: transparent;
+      // color: transparent;
+      color: #1d1b1c;
       font-weight: 600;
-      text-shadow: 1px 1px rgb(0, 0, 0);
+      // text-shadow: 1px 1px rgb(0, 0, 0);
       font-weight: bold;
       font-size: 22px;
       letter-spacing: 1px;
@@ -44,8 +45,8 @@
   color: #BB2649;
 }
 .navbar a img {
-  width: 104px;
-  height: 104px;
+  width: 65px;
+  height: 60px;
 }
 .nav-link {
   transition: 0.7s ease;
@@ -215,6 +216,7 @@
   color: transparent;
   animation: blink 1s linear infinite;
   overflow: hidden;
+  padding-left: 15px;
 }
 @keyframes blink {
   0% {
