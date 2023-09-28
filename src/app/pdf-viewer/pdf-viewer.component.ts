@@ -15,7 +15,6 @@ export class PdfViewerComponent implements OnInit {
   constructor(private sanitizer : DomSanitizer) { }
 
   ngOnInit(): void {
-    console.log(this.pdfUrl)
     this.current_url=this.sanitizer.bypassSecurityTrustResourceUrl(this.pdfUrl)
   }
 
