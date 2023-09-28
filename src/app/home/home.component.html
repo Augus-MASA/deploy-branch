@@ -45,12 +45,12 @@
           </div>
           <p>TNPSC</p>
           <div class="about-list">
-            <li (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')">Group IV /(Test Available)</li>
+            <li (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')" class="mc">Group IV / (Test Available)</li>
             <li>Gourp II/ 2A</li>
             <li>Gourp I</li>
           </div>
         </div>
-        <div class="blink" (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')"><span>Text Available</span></div>
+        <div class="blink mc" (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')"><span>Text Available</span></div>
       </div>
       <div class="col-lg-3 col-md-6 about-con-1">
         <div class="">
@@ -71,12 +71,12 @@
           </div>
           <p>TNUSRB</p>
           <div class="about-list">
-            <li (click)="openDialog('../assets/documents/POLICE.pdf','Police')">Police</li>
+            <li (click)="openDialog('../assets/documents/POLICE.pdf','Police')" class="mc">Police / (Test Available)</li>
             <li>Fingerprint SI</li>
             <li>SI</li>
           </div>
         </div>
-        <div class="blink" (click)="openDialog('../assets/documents/POLICE.pdf','Police')"><span>Text Available</span></div>      </div>
+        <div class="blink mc" (click)="openDialog('../assets/documents/POLICE.pdf','Police')"><span>Text Available</span></div>      </div>
       <div class="col-lg-3 col-md-6 about-con-1">
         <div class="">
           <div class="about-con mx-5">
@@ -154,7 +154,7 @@
     <div class="row py-5 text-center">
       <div class="col-lg-3 col-md-6 col-sm-12 pt-3 ">
           <h2>TNPSC</h2>
-        <li>Group IV /(Test Available)</li>
+        <li (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')" class="mc">Group IV /(Test Available)</li>
         <li>Gourp II/ 2A</li>
         <li>Gourp I</li>
       </div>
@@ -165,7 +165,7 @@
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 pt-3 ">
           <h2>TNUSRB</h2>
-        <li>Police</li>
+        <li (click)="openDialog('../assets/documents/POLICE.pdf','Police')" class="mc">Police / (Test Available)</li>
         <li>Fingerprint SI</li>
         <li>SI</li>
       </div>
@@ -185,6 +185,9 @@
 
 <sl-dialog label="{{dialogBoxTitle}}" class="dialog-overview" *ngIf="!!documentShow">
   <div class="pdfViewer">
-  <app-pdf-viewer [pdfUrl]="pdfUrl"></app-pdf-viewer>
+  <!-- <app-pdf-viewer [pdfUrl]="pdfUrl"></app-pdf-viewer> -->
+  <div style="width: 100%">
+    <iframe id="embedded" [src]="current_url" style="height: 100vh; width: 100%"></iframe>
+  </div>
 </div>
 </sl-dialog>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-home',
@@ -12,8 +13,9 @@ export class HomeComponent implements OnInit {
   pdfUrl:any;
   documentShow:boolean = false;
   dialogBoxTitle:any;
+  current_url:any;
 
-  constructor() { 
+  constructor(private sanitizer : DomSanitizer) { 
    this.navLinks
   window.onscroll =()=>{ 
     this.sections.forEach(sec =>{
@@ -76,6 +78,7 @@ export class HomeComponent implements OnInit {
 
   openDialog(url:any,title:any){
     this.pdfUrl = url;
+    this.current_url=this.sanitizer.bypassSecurityTrustResourceUrl(this.pdfUrl)
     this.documentShow = true;
     this.dialogBoxTitle = title
     setTimeout(() => {
