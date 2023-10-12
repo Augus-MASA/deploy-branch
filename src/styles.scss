@@ -104,12 +104,11 @@
 .sub-heading {
   text-align: center !important;
   // background: url('../assets/images/hero-bg.jpg');
-  // background-image: url('../assets/images/hero-bg.jpg');
-  background-image:
-  linear-gradient(273deg,
-    rgba(14, 13, 13, 0.75),
-    rgba(170, 171, 172, 0.39)), url(
-'https://img.freepik.com/free-photo/group-kids-studying-school_1303-26841.jpg?w=360');
+  background-image: url('./assets/images/svg\ file\ 1.svg');
+  // background-image:
+  // linear-gradient(273deg,
+    // rgba(14, 13, 13, 0.75),
+    // rgba(170, 171, 172, 0.39)), url('./assets/images/svg\ file\ 1.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -117,7 +116,7 @@
   height: 90vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
 }
 .sub-con {
   width: 100%;
@@ -126,25 +125,25 @@
   font-weight: bold;
   line-height: 58px;
   line-height: 50px;
-  color: #e2e0e0;
+  color: #b90f5f;
   font-family: 'Tiro Tamil', serif;}
 
 .banner img {
   width: 100%;
   height: auto;
 }
-.banner {
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-}
+// .banner {
+  // box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+// }
 //banner------ end
-.about{
+.Shedule-sec{
   background: radial-gradient(circle farthest-side, #fcaddd33, #f8009507);
   padding: 40px 0;
 }
 .about-con img {
   width: 70%;
 }
-.about p {
+.Shedule-sec p {
   font-size: 14px;
   text-align: center;
   font-weight: 500;
@@ -208,7 +207,7 @@
   bottom:-45px;
   transform: translate(25%);
 }
-.about span {
+.Shedule-sec span {
   font-size: 22px;
   font-weight: bold;
   background-image: linear-gradient(109.6deg, #850D29 11.2%, #BB2649 91.1%);
@@ -230,6 +229,10 @@
   }
 }
 @media (max-width: 568px) {
+  .about-section{
+    background-image: linear-gradient(145deg, #b90f5f 9.89%, rgba(255, 255, 255, 0.88) 5.04%, rgba(255, 255, 255, 0.79) 29.06%);
+  
+  }
   .about-con-1 {
     border-right: none;
     margin-top: 40px;
@@ -263,6 +266,7 @@
   }
 }
 @media (min-width: 569px) and (min-width: 768px) {
+  
   .about-con-1 {
     border-right: none;
     margin-top: 40px;
@@ -281,6 +285,11 @@
     font-size: 14px;
     font-weight: bold;
     color: #7d0f28;
+  }
+}
+@media (min-width: 425px) and (min-width: 768px) {
+  .about-section{
+    background-image: linear-gradient(159deg, #b90f5f 9.89%, rgba(255, 255, 255, 0.88) 5.04%, rgba(255, 255, 255, 0.79) 29.06%);
   }
 }
 @media (min-width: 768px) and (min-width: 1024px) {
@@ -325,9 +334,7 @@
   height: 3px;
   background-color: #e03a3c;
   transform: none !important;
- 
 }
-
 .all-head h2::after {
   content: "";
   position: absolute;
@@ -421,6 +428,26 @@
 
 .dialog-overview{
   --width: 100rem;
+}
+
+// <!---------- about--------->
+.about-section{
+
+}
+.li-first{
+padding-top:  70px;
+}
+.about-right ul li{
+  // padding-top: 50px;
+  list-style-type: disc;
+}
+.about-right{
+  justify-content: center;
+  align-items: center;
+}
+.about-img img{
+  width: 100%;
+  height: 50%;
 }
 
 .mc{
