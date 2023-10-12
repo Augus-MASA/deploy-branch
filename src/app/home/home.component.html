@@ -1,23 +1,20 @@
+<nav class="navbar">
+  <a href="#" class="nav-branding"> <img src="../assets/images/logo-3.png" alt="" /></a>
+  <ul class="nav-menu">
+    <li class="nav-item" id="active"> <a href="#" class="nav-link active">Home</a></li>
+    <li class="nav-item"> <a href="#about" class="nav-link">About</a></li>
+    <li class="nav-item"> <a href="#services" class="nav-link">Services</a></li>
+    <li class="nav-item"> <a href="#Shedule" class="nav-link">Shedule</a></li>
+    <li class="nav-item"> <a href="#Contact" class="nav-link">Contact</a></li>
+  </ul>
+  <div class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</nav>
 
 
-  
-      <nav class="navbar">
-      <a href="#" class="nav-branding">  <img src="../assets/images/logo-3.png" alt="" /></a>
-    <ul class="nav-menu">
-        <li class="nav-item" id="active"> <a href="#"class="nav-link active"  >Home</a></li>
-        <li class="nav-item"> <a href="#about"class="nav-link">About</a></li>
-        <li class="nav-item"> <a href="#services" class="nav-link">Services</a></li>
-        <li class="nav-item"> <a href="#Shedule" class="nav-link">Shedule</a></li>
-         <li class="nav-item"> <a href="#Contact" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </nav>
-
- 
 
 
 <!-- <app-pdf-viewer></app-pdf-viewer> -->
@@ -32,7 +29,36 @@
 </section>
 <!--banner end--------->
 
-<section class="about" id="Shedule">
+<!-------- About ----------->
+<div id="about" class="about-section">
+  <div class="about-head">
+    <h2 class="text-center pt-5"><span style=" color: #b90f5f;">About</span> Us</h2>
+    <h3 class="text-center pt-3">முதல் கட்ட பயிற்சி வெற்றியாளர்கள்</h3>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="about-right col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <ul class="">
+          <li class="li-first">அக்னிபாத் ராணுவ வீரராக செல்வன். ரா.கண்ணன்
+            தேர்ந்தெடுக்கப்பட்டுள்ளார்.</li>
+          <li class="pt-5">TNPSC Group || & IIA முதல்நிலைத் தேர்வில் 5 பேர்
+            தேர்ச்சி.</li>
+          <li class="pt-5">TNUSRB, POLICE இரண்டாம் நிலைக் காவலர் தேர்வில் 10 பேர் தேர்ச்சி.</li>
+          <li class="pt-5">TRB, TNTET - Paper | ஆசிரியர் தகுதித் தேர்வில் 8 பேர் தேர்ச்சி.</li>
+        </ul>
+      </div>
+      <div class="about-left col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="about-img">
+          <img src="./assets/images/about img.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <h5 class="text-center pb-3"> <strong>ஊக்கப்படுத்தி உதவிக் கொண்டிருக்கும்
+        அனைத்து நல்உள்ளங்களுக்கும் நெஞ்சார்ந்த நன்றிகள்...</strong></h5>
+  </div>
+</div>
+
+<section class="Shedule-sec" id="Shedule">
   <div class="all-head text-center">
     <h2>Shedule</h2>
   </div>
@@ -45,12 +71,14 @@
           </div>
           <p>TNPSC</p>
           <div class="about-list">
-            <li (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')" class="mc">Group IV / (Test Available)</li>
+            <li (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')" class="mc">Group IV / (Test Available)
+            </li>
             <li>Gourp II/ 2A</li>
             <li>Gourp I</li>
           </div>
         </div>
-        <div class="blink mc" (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')"><span>Text Available</span></div>
+        <div class="blink mc" (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')"><span>Text Available</span>
+        </div>
       </div>
       <div class="col-lg-3 col-md-6 about-con-1">
         <div class="">
@@ -71,12 +99,16 @@
           </div>
           <p>TNUSRB</p>
           <div class="about-list">
-            <li (click)="openDialog('../assets/documents/POLICE.pdf','Police')" class="mc">Police / (Test Available)</li>
+            <li (click)="openDialog('../assets/documents/POLICE.pdf','Police')" class="mc">Police / (Test Available)
+            </li>
             <li>Fingerprint SI</li>
             <li>SI</li>
           </div>
         </div>
-        <div class="blink mc" (click)="openDialog('../assets/documents/POLICE.pdf','Police')"><span>Text Available</span></div>      </div>
+        <div class="blink mc" (click)="openDialog('../assets/documents/POLICE.pdf','Police')"><span>Text
+            Available</span>
+        </div>
+      </div>
       <div class="col-lg-3 col-md-6 about-con-1">
         <div class="">
           <div class="about-con mx-5">
@@ -129,19 +161,20 @@
         <div class="map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15762.691412781394!2d77.38385651907177!3d9.002219690115579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b069d3afd762bad%3A0x3ffa9855713268ab!2sSambavarvadakarai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1677398014919!5m2!1sen!2sin"
-            width="100%"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+            width="100%" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
       <div class="col-lg-8 col-md-8 col-sm-12 pt-2">
         <div class="conact-content">
-          <div > <p class="d-flex align-items-center justify-content-center"><span class="iconify icon" data-icon="bi:person-fill"></span>கனக அருண் <span>+91 99652 90366</span></p></div>
-          <div class="mt-3"><p class="d-flex align-items-center justify-content-center"><span class="iconify icon" data-icon="bi:person-fill"></span>கருப்பசாமி<span>+91 97897 35249</span></p></div>
+          <div>
+            <p class="d-flex align-items-center justify-content-center"><span class="iconify icon"
+                data-icon="bi:person-fill"></span>கனக அருண் <span>+91 99652 90366</span></p>
+          </div>
+          <div class="mt-3">
+            <p class="d-flex align-items-center justify-content-center"><span class="iconify icon"
+                data-icon="bi:person-fill"></span>கருப்பசாமி<span>+91 97897 35249</span></p>
+          </div>
         </div>
       </div>
     </div>
@@ -153,25 +186,25 @@
   <div class="container">
     <div class="row py-5 text-center">
       <div class="col-lg-3 col-md-6 col-sm-12 pt-3 ">
-          <h2>TNPSC</h2>
+        <h2>TNPSC</h2>
         <li (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')" class="mc">Group IV /(Test Available)</li>
         <li>Gourp II/ 2A</li>
         <li>Gourp I</li>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 pt-3">
-          <h2>SSC</h2>
-      
+        <h2>SSC</h2>
+
         <li>All SSC Exam</li>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 pt-3 ">
-          <h2>TNUSRB</h2>
+        <h2>TNUSRB</h2>
         <li (click)="openDialog('../assets/documents/POLICE.pdf','Police')" class="mc">Police / (Test Available)</li>
         <li>Fingerprint SI</li>
         <li>SI</li>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 pt-3">
-          <h2>ARMY</h2>
-      
+        <h2>ARMY</h2>
+
         <li>AGNIPADH</li>
         <li>Navy</li>
         <li>Air Force</li>
@@ -179,15 +212,15 @@
     </div>
   </div>
   <div class="footer-content">
-       
+
   </div>
 </section>
 
 <sl-dialog label="{{dialogBoxTitle}}" class="dialog-overview" *ngIf="!!documentShow">
   <div class="pdfViewer">
-  <!-- <app-pdf-viewer [pdfUrl]="pdfUrl"></app-pdf-viewer> -->
-  <div style="width: 100%">
-    <iframe id="embedded" [src]="current_url" style="height: 100vh; width: 100%"></iframe>
+    <!-- <app-pdf-viewer [pdfUrl]="pdfUrl"></app-pdf-viewer> -->
+    <div style="width: 100%">
+      <iframe id="embedded" [src]="current_url" style="height: 100vh; width: 100%"></iframe>
+    </div>
   </div>
-</div>
 </sl-dialog>
