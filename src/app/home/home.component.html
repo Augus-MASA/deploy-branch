@@ -3,7 +3,6 @@
   <ul class="nav-menu">
     <li class="nav-item" id="active"> <a href="#" class="nav-link active">Home</a></li>
     <li class="nav-item"> <a href="#about" class="nav-link">About</a></li>
-    <li class="nav-item"> <a href="#services" class="nav-link">Services</a></li>
     <li class="nav-item"> <a href="#Shedule" class="nav-link">Shedule</a></li>
     <li class="nav-item"> <a href="#Contact" class="nav-link">Contact</a></li>
   </ul>
@@ -30,7 +29,7 @@
 <!--banner end--------->
 
 <!-------- About ----------->
-<div id="about" class="about-section">
+<section id="about" class="about-section">
   <div class="about-head">
     <h2 class="text-center pt-5"><span style=" color: #b90f5f;">About</span> Us</h2>
     <h3 class="text-center pt-3">முதல் கட்ட பயிற்சி வெற்றியாளர்கள்</h3>
@@ -56,7 +55,7 @@
     <h5 class="text-center pb-3"> <strong>ஊக்கப்படுத்தி உதவிக் கொண்டிருக்கும்
         அனைத்து நல்உள்ளங்களுக்கும் நெஞ்சார்ந்த நன்றிகள்...</strong></h5>
   </div>
-</div>
+</section>
 
 <section class="Shedule-sec" id="Shedule">
   <div class="all-head text-center">
@@ -77,7 +76,7 @@
             <li>Gourp I</li>
           </div>
         </div>
-        <div class="blink mc" (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')"><span>Text Available</span>
+        <div class="blink mc" (click)="selectType('GROUP','TNPSC')"><span>Text Available</span>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 about-con-1">
@@ -105,7 +104,7 @@
             <li>SI</li>
           </div>
         </div>
-        <div class="blink mc" (click)="openDialog('../assets/documents/POLICE.pdf','Police')"><span>Text
+        <div class="blink mc" (click)="selectType('TNUSRB','TNUSRB')"><span>Text
             Available</span>
         </div>
       </div>
@@ -127,7 +126,7 @@
   </div>
 </section>
 <!-- about end...........-->
-<section class="about2 " id="about py-4">
+<section class="about2 " id="about2">
   <div class="container">
     <div class="all-head text-center  ">
       <h2>ஜெயித்து காட்டுவோம்.....!</h2>
@@ -182,7 +181,7 @@
 </section>
 
 <!-------------------------- conact--------------------- -->
-<section class=" footer pt-5">
+<section class=" footer pt-5" id="footer">
   <div class="container">
     <div class="row py-5 text-center">
       <div class="col-lg-3 col-md-6 col-sm-12 pt-3 ">
@@ -216,8 +215,37 @@
   </div>
 </section>
 
-<sl-dialog label="{{dialogBoxTitle}}" class="dialog-overview" *ngIf="!!documentShow">
-  <div class="pdfViewer">
+<sl-dialog label="{{dialogBoxTitle}}" class="dialog-overview"
+  *ngIf="!!documentShow">
+  <div style="width: 100%" *ngIf="selectedType == 'GROUP' && !current_url">
+    <div>
+      <li (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')" class="mc">Group IV / (Test Available)
+      </li>
+      <li>Gourp II/ 2A</li>
+      <li>Gourp I</li>
+    </div>
+  </div>
+  <div style="width: 100%" *ngIf="selectedType == 'SSC' && !current_url">
+    <div>
+      <li>All SSC Exam</li>
+    </div>
+  </div>
+  <div style="width: 100%" *ngIf="selectedType == 'TNUSRB' && !current_url">
+    <div>
+      <li (click)="openDialog('../assets/documents/POLICE.pdf','Police')" class="mc">Police / (Test Available)
+      </li>
+      <li>Fingerprint SI</li>
+      <li>SI</li>
+    </div>
+  </div>
+  <div style="width: 100%" *ngIf="selectedType == 'ARMY' && !current_url">  
+    <div>
+      <li>AGNIPADH</li>
+      <li>Navy</li>
+      <li>Air Force</li>
+    </div>
+  </div>
+  <div class="pdfViewer" *ngIf="!!current_url">
     <!-- <app-pdf-viewer [pdfUrl]="pdfUrl"></app-pdf-viewer> -->
     <div style="width: 100%">
       <iframe id="embedded" [src]="current_url" style="height: 100vh; width: 100%"></iframe>

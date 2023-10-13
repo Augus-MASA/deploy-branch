@@ -14,19 +14,19 @@ export class HomeComponent implements OnInit {
   documentShow:boolean = false;
   dialogBoxTitle:any;
   current_url:any;
+  selectedType:any;
 
   constructor(private sanitizer : DomSanitizer) { 
    this.navLinks
   window.onscroll =()=>{ 
     this.sections.forEach(sec =>{
-      console.log("active");
         let top= window.scrollY;
         let offset =sec.offsetTop;
         let height = sec.offsetHeight;
         let id =sec.getAttribute('id');
-        
-        
 
+        
+        
         if (top >= offset && top < offset + height) {
            this.navLinks.forEach(links =>{
              links.classList.remove('active')
@@ -79,13 +79,24 @@ export class HomeComponent implements OnInit {
   openDialog(url:any,title:any){
     this.pdfUrl = url;
     this.current_url=this.sanitizer.bypassSecurityTrustResourceUrl(this.pdfUrl)
+    this.dialogBoxTitle = title
+    this.documentShow = true;
+    setTimeout(() => {
+      const dialog: any = document.querySelector('.dialog-overview');
+      dialog?.show();
+      this.pdfUrl = null;
+    }, 500);
+  }
+
+  selectType(type:any,title:any){
+    this.current_url = null
+    this.selectedType = type;
     this.documentShow = true;
     this.dialogBoxTitle = title
     setTimeout(() => {
-    const dialog: any = document.querySelector('.dialog-overview');
-    dialog?.show();
-    this.pdfUrl = null
-  }, 500);
+      const dialog: any = document.querySelector('.dialog-overview');
+      dialog?.show();
+    }, 500);
   }
 
 
