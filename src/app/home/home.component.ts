@@ -99,6 +99,12 @@ export class HomeComponent implements OnInit {
     }, 500);
   }
 
+  changeActive(id:string){
+    let navMenu:any = document.querySelector(".active")
+    navMenu.classList.remove("active");
+    let element:any = document.getElementById(id)
+    element.classList.add("active");
+  }
 
 
 }
