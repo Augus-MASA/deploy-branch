@@ -1,10 +1,10 @@
 <nav class="navbar">
   <a href="#" class="nav-branding"> <img src="../assets/images/logo-3.png" alt="" /></a>
   <ul class="nav-menu">
-    <li class="nav-item" id="active"> <a href="#" class="nav-link active">Home</a></li>
-    <li class="nav-item"> <a href="#about" class="nav-link">About</a></li>
-    <li class="nav-item"> <a href="#Shedule" class="nav-link">Shedule</a></li>
-    <li class="nav-item"> <a href="#Contact" class="nav-link">Contact</a></li>
+    <li class="nav-item" id="active"> <a id="homeSelector" href="#" class="nav-link active" (click)="changeActive('homeSelector')">Home</a></li>
+    <li class="nav-item"> <a id="aboutSelector" href="#about" class="nav-link" (click)="changeActive('aboutSelector')">About</a></li>
+    <li class="nav-item"> <a id="scheduleSelector" href="#Shedule" class="nav-link" (click)="changeActive('scheduleSelector')">Shedule</a></li>
+    <li class="nav-item"> <a id="contactSelector" href="#Contact" class="nav-link" (click)="changeActive('contactSelector')">Contact</a></li>
   </ul>
   <div class="hamburger">
     <span class="bar"></span>
@@ -18,6 +18,9 @@
 
 <!-- <app-pdf-viewer></app-pdf-viewer> -->
 <!------------- sub heading -->
+<div class="d-flex justify-content-between  align-items-center w-100">
+  <div><b>செவிகள் கேட்கட்டும்…👍</b></div> <div><b>செயல்கள் பேசட்டும்…👍</b></div>
+</div>
 <section class="banner">
   <div class="sub-heading">
     <div class="sub-con py-4">
@@ -70,13 +73,12 @@
           </div>
           <p>TNPSC</p>
           <div class="about-list">
-            <li (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')" class="mc">Group IV / (Test Available)
-            </li>/
+            <li>Group IV</li>
             <li>Gourp II/ 2A</li>
             <li>Gourp I</li>
           </div>
         </div>
-        <div class="blink mc" (click)="selectType('GROUP','TNPSC')"><span>Text Available</span>
+        <div class="blink mc" (click)="selectType('GROUP','TNPSC')"><span>Test Available</span>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 about-con-1">
@@ -98,13 +100,12 @@
           </div>
           <p>TNUSRB</p>
           <div class="about-list">
-            <li (click)="openDialog('../assets/documents/POLICE.pdf','Police')" class="mc">Police / (Test Available)
-            </li>
+            <li>Police</li>
             <li>Fingerprint SI</li>
             <li>SI</li>
           </div>
         </div>
-        <div class="blink mc" (click)="selectType('TNUSRB','TNUSRB')"><span>Text
+        <div class="blink mc" (click)="selectType('TNUSRB','TNUSRB')"><span>Test
             Available</span>
         </div>
       </div>
@@ -188,7 +189,7 @@
     <div class="row py-5 text-center">
       <div class="col-lg-3 col-md-6 col-sm-12 pt-3 ">
         <h2>TNPSC</h2>
-        <li (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')" class="mc">Group IV /(Test Available)</li>
+        <li>Group IV</li>
         <li>Gourp II/ 2A</li>
         <li>Gourp I</li>
       </div>
@@ -199,7 +200,7 @@
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 pt-3 ">
         <h2>TNUSRB</h2>
-        <li (click)="openDialog('../assets/documents/POLICE.pdf','Police')" class="mc">Police / (Test Available)</li>
+        <li>Police</li>
         <li>Fingerprint SI</li>
         <li>SI</li>
       </div>
@@ -219,11 +220,11 @@
   </div>
 </section>
 
-<sl-dialog label="{{dialogBoxTitle}}" [ngClass]="{'!current_url' : 'dialog-box'}" class="dialog-overview "
+<sl-dialog label="{{dialogBoxTitle}}" [ngClass]="{'dialog-box' : !current_url, 'dialog-pdf' : !!current_url}" class="dialog-overview "
   *ngIf="!!documentShow">
   <div style="width: 100%" *ngIf="selectedType == 'GROUP' && !current_url">
     <div class="text-center">
-      <li (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')" class="mc">Group IV / (Test Available)
+      <li (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')" class="mc">Group IV / <span class="text-danger">(Click)</span>
       </li>
       <li>Gourp II/ 2A</li>
       <li>Gourp I</li>
@@ -236,7 +237,7 @@
   </div>
   <div style="width: 100%" *ngIf="selectedType == 'TNUSRB' && !current_url">
     <div class="text-center">
-      <li (click)="openDialog('../assets/documents/POLICE.pdf','Police')" class="mc">Police / (Test Available)
+      <li (click)="openDialog('../assets/documents/POLICE.pdf','Police')" class="mc">Police / <span class="text-danger">(Click)</span>
       </li>
       <li>Fingerprint SI</li>
       <li>SI</li>
