@@ -1,10 +1,14 @@
 <nav class="navbar">
   <a href="#" class="nav-branding"> <img src="../assets/images/logo-3.png" alt="" /></a>
   <ul class="nav-menu">
-    <li class="nav-item" id="active"> <a id="homeSelector" href="#" class="nav-link active" (click)="changeActive('homeSelector')">Home</a></li>
-    <li class="nav-item"> <a id="aboutSelector" href="#about" class="nav-link" (click)="changeActive('aboutSelector')">About</a></li>
-    <li class="nav-item"> <a id="scheduleSelector" href="#Shedule" class="nav-link" (click)="changeActive('scheduleSelector')">Shedule</a></li>
-    <li class="nav-item"> <a id="contactSelector" href="#Contact" class="nav-link" (click)="changeActive('contactSelector')">Contact</a></li>
+    <li class="nav-item" id="active"> <a id="homeSelector" href="#" class="nav-link active"
+        (click)="changeActive('homeSelector')">Home</a></li>
+    <li class="nav-item"> <a id="aboutSelector" href="#about" class="nav-link"
+        (click)="changeActive('aboutSelector')">About</a></li>
+    <li class="nav-item"> <a id="scheduleSelector" href="#Shedule" class="nav-link"
+        (click)="changeActive('scheduleSelector')">Shedule</a></li>
+    <li class="nav-item"> <a id="contactSelector" href="#Contact" class="nav-link"
+        (click)="changeActive('contactSelector')">Contact</a></li>
   </ul>
   <div class="hamburger">
     <span class="bar"></span>
@@ -18,8 +22,9 @@
 
 <!-- <app-pdf-viewer></app-pdf-viewer> -->
 <!------------- sub heading -->
-<div class="d-flex justify-content-between  align-items-center w-100">
-  <div><b>செவிகள் கேட்கட்டும்…👍</b></div> <div><b>செயல்கள் பேசட்டும்…👍</b></div>
+<div class="d-flex justify-content-between  align-items-center w-100 text-center ">
+  <div><b>செவிகள் கேட்கட்டும்…👍</b></div>
+  <div><b>செயல்கள் பேசட்டும்…👍</b></div>
 </div>
 <section class="banner">
   <div class="sub-heading">
@@ -127,7 +132,7 @@
   </div>
 </section>
 <!-- about end...........-->
-<section class="about2 pt-5" id="about2">
+<section class="about2 py-5" id="about2">
   <div class="container">
     <div class="all-head text-center  ">
       <h2>ஜெயித்து காட்டுவோம்.....!</h2>
@@ -142,7 +147,8 @@
             நடைபெறும்
 
             <br />
-            செவிகள் கேட்கட்டும்…👍 செயல்கள் பேசட்டும்…👍
+            <strong>செவிகள் கேட்கட்டும்…👍 செயல்கள் பேசட்டும்…👍</strong>
+
           </p>
           <!-- <button type="button" class="btn btn-dark">Dark</button> -->
         </div>
@@ -213,18 +219,20 @@
       </div>
     </div>
   </div>
-  <div class="footer-content text-center">
-    <h6 style="color: #fff;padding: 8px 0px;font-size: 12px;">developed by <span style="font-weight: bold;">LAKARAM
-        Infotech..</span>
-    </h6>
-  </div>
 </section>
+<div class="footer-content text-center">
+  <p style="color: #fff;padding: 8px 0px;font-size: 12px;margin: 0px;">developed by <span
+      style="font-weight: bold;">LAKARAM
+      Infotech..</span>
+  </p>
+</div>
 
-<sl-dialog label="{{dialogBoxTitle}}" [ngClass]="{'dialog-box' : !current_url, 'dialog-pdf' : !!current_url}" class="dialog-overview "
-  *ngIf="!!documentShow">
+<sl-dialog label="{{dialogBoxTitle}}" [ngClass]="{'dialog-box' : !current_url, 'dialog-pdf' : !!current_url}"
+  class="dialog-overview " *ngIf="!!documentShow">
   <div style="width: 100%" *ngIf="selectedType == 'GROUP' && !current_url">
     <div class="text-center">
-      <li (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')" class="mc">Group IV / <span class="text-danger">(Click)</span>
+      <li (click)="openDialog('../assets/documents/GIV.pdf','Gourp IV')" class="mc">Group IV / <span
+          class="text-danger">(Click)</span>
       </li>
       <li>Gourp II/ 2A</li>
       <li>Gourp I</li>
@@ -237,7 +245,8 @@
   </div>
   <div style="width: 100%" *ngIf="selectedType == 'TNUSRB' && !current_url">
     <div class="text-center">
-      <li (click)="openDialog('../assets/documents/POLICE.pdf','Police')" class="mc">Police / <span class="text-danger">(Click)</span>
+      <li (click)="openDialog('../assets/documents/POLICE.pdf','Police')" class="mc">Police / <span
+          class="text-danger">(Click)</span>
       </li>
       <li>Fingerprint SI</li>
       <li>SI</li>
